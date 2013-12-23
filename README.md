@@ -28,6 +28,8 @@ List of interactive commands (added or replaced in `rst-mode-map`):
  <kbd>C-c h</kbd> | `sphinx-build-html`   | Compile rst files to html via sphinx                 
  <kbd>C-c l</kbd> | `sphinx-build-latex`  | Compile rst files to latex                           
  <kbd>C-c p</kbd> | `sphinx-run-pdflatex` | Ad-hoc call pdflatex for LaTeX-builded documentation 
+                  | `sphinx-clean-html`   | Remove `sphinx-output-dir-html` dir
+                  | `sphinx-clean-pdf`    | Remove `sphinx-output-dir-pdf` dir
 
 ## License
 

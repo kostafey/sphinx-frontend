@@ -77,18 +77,21 @@ If `save-without-query' is t, saves current file without query."
           (save-buffer rst-buffer))
       (compile command))))
 
+;;;###autoload
 (defun sphinx-build-html (arg)
   "Compiles the rst file to html via sphinx and shows the output in a buffer.
 Without `arg' saves current file."
   (interactive "P")
   (sphinx-build (not arg) (sphinx-get-build-command-html)))
 
+;;;###autoload
 (defun sphinx-build-latex (arg)
   "Compiles the rst file to latex via sphinx and shows the output in a buffer.
 Without `arg' saves current file."
   (interactive "P")
   (sphinx-build (not arg) (sphinx-get-build-command-latex)))
 
+;;;###autoload
 (defun sphinx-run-pdflatex ()
   "Ad-hoc call pdflatex for LaTeX-builded documentation."
   (interactive)
@@ -102,11 +105,13 @@ Without `arg' saves current file."
     (expand-file-name sphinx-output-dir
                       (sphinx-get-root-document-dir))) t t))
 
+;;;###autoload
 (defun sphinx-clean-html ()
   "Removes `sphinx-output-dir-html' dir."
   (interactive)
   (sphinx--clean sphinx-output-dir-html))
 
+;;;###autoload
 (defun sphinx-clean-pdf ()
   "Removes `sphinx-output-dir-pdf' dir."
   (interactive)
