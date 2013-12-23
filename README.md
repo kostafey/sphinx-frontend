@@ -23,11 +23,11 @@ Then you can install `sphinx-frontend` with the following command:
 
 List of interactive commands:
 
-| Key              | Command             | Description                                          |
-|------------------+---------------------+------------------------------------------------------|
-| <kbd>C-c h</kbd> | sphinx-build-html   | Compile rst files to html via sphinx                 |
-| <kbd>C-c l</kbd> | sphinx-build-latex  | Compile rst files to latex                           |
-| <kbd>C-c p</kbd> | sphinx-run-pdflatex | Ad-hoc call pdflatex for LaTeX-builded documentation |
+ Key              | Command               | Description                                          
+------------------|-----------------------|------------------------------------------------------
+ <kbd>C-c h</kbd> | `sphinx-build-html`   | Compile rst files to html via sphinx                 
+ <kbd>C-c l</kbd> | `sphinx-build-latex`  | Compile rst files to latex                           
+ <kbd>C-c p</kbd> | `sphinx-run-pdflatex` | Ad-hoc call pdflatex for LaTeX-builded documentation 
 
 ## License
 
