@@ -1,4 +1,4 @@
-;;; sphinx-frontend.el -- Launches build process for rst documents via sphinx.
+;;; sphinx-frontend.el --- Launch build process for rst documents via sphinx.
 
 ;; Copyright © 2012-2013 - Kostafey <kostafey@gmail.com>
 
