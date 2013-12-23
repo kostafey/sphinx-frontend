@@ -21,7 +21,7 @@ Then you can install `sphinx-frontend` with the following command:
 
 ## Usage
 
-List of interactive commands:
+List of interactive commands (added or replaced in `rst-mode-map`):
 
  Key              | Command               | Description                                          
 ------------------|-----------------------|------------------------------------------------------
