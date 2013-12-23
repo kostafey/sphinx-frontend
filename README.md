@@ -19,6 +19,12 @@ Then you can install `sphinx-frontend` with the following command:
 
 <kbd>M-x package-install [RET] sphinx-frontend [RET]</kbd>
 
+Load sphinx-frontend:
+
+```lisp
+(require 'sphinx-frontend)
+```
+
 ## Usage
 
 List of interactive commands (added or replaced in `rst-mode-map`):
