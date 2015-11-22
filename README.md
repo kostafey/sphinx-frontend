@@ -11,7 +11,7 @@ Add MELPA (if not yet) to your `package-archives` list:
 ```lisp
 (require 'package)
 (add-to-list 'package-archives
-             '("melpa" . "http://melpa.milkbox.net/packages/"))
+             '("melpa" . "https://melpa.org/packages/"))
 (package-initialize)
 ```
 

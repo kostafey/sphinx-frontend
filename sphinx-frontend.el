@@ -34,7 +34,7 @@
   "Relative to current document's root output directory for pdf format.")
 
 (defvar sphinx-conf-file-name "conf.py"
-  "Document's root configiration file.")
+  "Document's root configuration file.")
 
 (defun sphinx-get-root-document-dir ()
   "Recursively searches current document's tree root.
