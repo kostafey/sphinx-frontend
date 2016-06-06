@@ -1,6 +1,6 @@
 ;;; sphinx-frontend.el --- Launch build process for rst documents via sphinx.
 
-;; Copyright © 2012-2013 - Kostafey <kostafey@gmail.com>
+;; Copyright © 2012-2016 - Kostafey <kostafey@gmail.com>
 
 ;; Author: Kostafey <kostafey@gmail.com>
 ;; URL: https://github.com/kostafey/sphinx-frontend
@@ -47,10 +47,11 @@ Returns current document's tree root directory."
   "Returns sphinx build command according to `output-format'."
   (let ((current-dir (sphinx-get-root-document-dir)))
     (concat sphinx-build-command " " output-format " "
-            " \"" (file-name-as-directory current-dir) "\" " ; sourcedir
-            " \"" (file-name-as-directory 
-                   (expand-file-name output-dir current-dir)) "\"" ; outdir
-            )))
+            ;; sourcedir
+            (shell-quote-argument (file-name-as-directory current-dir)) " "
+            ;; outdir
+            (shell-quote-argument (file-name-as-directory
+                                   (expand-file-name output-dir current-dir))))))
 
 (defun sphinx-get-build-command-html ()
   (sphinx-get-build-command "html" sphinx-output-dir-html))
