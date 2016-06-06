@@ -40,16 +40,8 @@
   "Recursively searches current document's tree root.
 The root sign is the location in the directory `sphinx-conf-file-name' file.
 Returns current document's tree root directory."
-  (let ((current-dir default-directory)
-        (old-current-dir default-directory))
-    (progn
-      (while (not (file-exists-p (expand-file-name sphinx-conf-file-name current-dir)))
-        (progn
-          (setq old-current-dir current-dir)
-          (setq current-dir (expand-file-name ".." current-dir))
-          (if (equal old-current-dir current-dir)
-              (error (concat "Can't find file " sphinx-conf-file-name)))))
-      current-dir)))
+  (or (locate-dominating-file default-directory sphinx-conf-file-name)
+      (error (concat "Can't find file " sphinx-conf-file-name))))
 
 (defun sphinx-get-build-command (output-format output-dir)
   "Returns sphinx build command according to `output-format'."
