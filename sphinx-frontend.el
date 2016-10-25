@@ -48,7 +48,7 @@ Returns current document's tree root directory."
   (let ((current-dir (sphinx-get-root-document-dir)))
     (concat sphinx-build-command " " output-format " "
             ;; sourcedir
-            (shell-quote-argument (file-name-as-directory current-dir)) " "
+            (shell-quote-argument (file-name-as-directory (expand-file-name current-dir))) " "
             ;; outdir
             (shell-quote-argument (file-name-as-directory
                                    (expand-file-name output-dir current-dir))))))
